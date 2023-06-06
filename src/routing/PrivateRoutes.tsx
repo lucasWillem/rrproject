@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 
-import { useCheckIfLoggedIn } from "../hooks/useCheckIfLoggedIn";
+interface PrivateRoutesProps {
+  isAuthenticated: boolean;
+}
 
-const PrivateRoutes: FC = () => {
-  const isAuthenticated = useCheckIfLoggedIn();
-
+const PrivateRoutes: FC<PrivateRoutesProps> = ({ isAuthenticated }) => {
   return isAuthenticated ? <Outlet /> : <Navigate to="/unauthorized" />;
 };
 

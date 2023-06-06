@@ -6,6 +6,7 @@ import { AccountPage } from "../pages/AccountPage";
 import { UnauthorizedPage } from "../pages/UnauthorizedPage";
 
 import { PrivateRoutes } from "./PrivateRoutes";
+import { PublicRoutes } from "./PublicRoutes";
 
 interface RouterProps {
   NavBar: ReactNode;
@@ -16,13 +17,15 @@ export const Router: FC<RouterProps> = ({ NavBar }) => {
     <BrowserRouter>
       {NavBar}
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
         <Route element={<PrivateRoutes />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/account" element={<AccountPage />} />
         </Route>
+        <Route element={<PublicRoutes />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/*" element={<Navigate to="/login" replace />} />
+        </Route>
         <Route path="/unauthorized" element={<UnauthorizedPage />} />
-        <Route path="/*" element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>
   );

@@ -4,7 +4,7 @@ import { Controller, useForm } from "react-hook-form";
 import { Button, TextField, Typography } from "@mui/material";
 
 import { StyledLoginForm, StyledTextContainer } from "./styles";
-import { emailPattern, passwordPattern } from "../../../constants";
+import { emailPattern, passwordPattern } from "../../../constants/regex";
 
 import { isAuthenticatedUser } from "../../../utils/isAuthenticatedUser";
 import { useDispatch } from "react-redux";

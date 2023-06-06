@@ -29,7 +29,9 @@ export const Header: FC<HeaderProps> = ({ navLinks }) => {
 
   const navigate = useNavigate();
 
-  const location = useLocation();
+  const { pathname } = useLocation();
+
+  const dispatch = useDispatch();
 
   const handleDrawerToggle = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -40,10 +42,7 @@ export const Header: FC<HeaderProps> = ({ navLinks }) => {
     navigate("/login");
   };
 
-  const dispatch = useDispatch();
-
-  const showHeader =
-    location.pathname !== "/login" && location.pathname !== "/unauthorized";
+  const showHeader = pathname !== "/login" && pathname !== "/unauthorized";
 
   return showHeader ? (
     <>
@@ -59,7 +58,7 @@ export const Header: FC<HeaderProps> = ({ navLinks }) => {
         <List>
           {navLinks.map(({ label, path }, index) => {
             return (
-              path !== location.pathname && (
+              path !== pathname && (
                 <ListItem
                   key={`${label}-${index}`}
                   button

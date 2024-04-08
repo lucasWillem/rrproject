@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import { Variant } from "../../../redux/loaderSlice";
 import { StyledLoader } from "./styles";
 
@@ -11,4 +11,4 @@ const Loader: FC<LoaderProps> = ({ isVisible, variant='inherit' }) => {
   return isVisible ? <StyledLoader color={variant} /> : null;
 };
 
-export { Loader };
+export default memo(Loader);

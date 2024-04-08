@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, memo } from "react";
 
 import { Box } from "@mui/material";
 
@@ -14,7 +14,7 @@ import { AlertSeverity } from "../../library/SnackBar/SnackBar";
 
 interface DetailedCountryProps { }
 
-export const DetailedCountry: FC<DetailedCountryProps> = () => {
+const DetailedCountry: FC<DetailedCountryProps> = () => {
 
   const { countryName } = useSelector((state: RootState) => state.country);
 
@@ -46,3 +46,5 @@ export const DetailedCountry: FC<DetailedCountryProps> = () => {
     </Box>
   );
 };
+
+export default memo(DetailedCountry);

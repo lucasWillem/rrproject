@@ -39,10 +39,10 @@ export const LoginForm: FC = () => {
 
   const navigate = useNavigate();
 
+  const jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5";
+
   const toggleLoader = () => {
     dispatch(showLoader({ isVisible: true, variant: "success" }));
-
-    setTimeout(() => dispatch(showLoader({ isVisible: false })), 2000);
   };
 
   const onLogin = (data: LoginFormInputs) => {
@@ -55,9 +55,9 @@ export const LoginForm: FC = () => {
 
     toggleLoader();
 
-    dispatch(storeUser(data));
+    dispatch(storeUser({ ...data, jwtToken }));
 
-    navigate("/home");
+    navigate("/countries");
   };
 
   const handleChange = (name: keyof LoginFormInputs) => {

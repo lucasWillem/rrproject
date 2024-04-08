@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, memo } from "react";
 
 import { Box } from "@mui/material";
 
@@ -16,7 +16,7 @@ interface CountryListProps {
   limit: number;
 }
 
-export const CountryList: FC<CountryListProps> = ({ limit }) => {
+const CountryList: FC<CountryListProps> = ({ limit }) => {
 
   const { data: listOfCountries, isFetching: isFetchingListOfCountries, error: errorFetchingCountryList } = useFetchAllCountries(limit);
 
@@ -55,4 +55,5 @@ export const CountryList: FC<CountryListProps> = ({ limit }) => {
   );
 };
 
+export default memo(CountryList);
 

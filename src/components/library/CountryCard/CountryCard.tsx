@@ -1,4 +1,4 @@
-import React, { FC, CSSProperties, useMemo, useCallback } from "react";
+import React, { FC, CSSProperties, useMemo, useCallback, memo } from "react";
 import { CardContent, CardProps, Typography, TypographyVariant } from '@mui/material';
 import { StyledCountryCard } from "./styles";
 import { BasicCountry } from "../../../hooks/useFetchAllCountries";
@@ -85,4 +85,4 @@ const CountryCard: FC<CountryCardProps> = (props) => {
   );
 };
 
-export { CountryCard };
+export default memo(CountryCard);

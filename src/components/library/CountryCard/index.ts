@@ -1,1 +1,3 @@
-export { CountryCard as default } from "./CountryCard";
+import CountryCard from "./CountryCard";
+
+export default CountryCard;

@@ -1,0 +1,1 @@
+export { DetailedCountry as default} from "./DetailedCountry";

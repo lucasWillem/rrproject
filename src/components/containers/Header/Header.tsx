@@ -20,9 +20,10 @@ import { StyledTitle } from "./styles";
 
 interface HeaderProps {
   navLinks: NavLink[];
+  title?: string;
 }
 
-export const Header: FC<HeaderProps> = ({ navLinks }) => {
+export const Header: FC<HeaderProps> = ({ navLinks, title = 'Geo App' }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const isAuthenticated = useCheckIfLoggedIn();
@@ -51,7 +52,7 @@ export const Header: FC<HeaderProps> = ({ navLinks }) => {
           <IconButton edge="start" color="inherit" onClick={handleDrawerToggle}>
             <MenuIcon />
           </IconButton>
-          <StyledTitle variant="h6">R & R Tech</StyledTitle>
+          <StyledTitle variant="h6">{title}</StyledTitle>
         </Toolbar>
       </AppBar>
       <Drawer open={isDrawerOpen} onClose={handleDrawerToggle}>

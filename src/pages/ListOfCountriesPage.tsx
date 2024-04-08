@@ -1,10 +1,13 @@
-import React, { FC } from "react";
+import React, { FC, useMemo } from "react";
 
 import CountryList from "../components/containers/CountryList";
 
 export const ListOfCountriesPage: FC = () => {
+
+  const limit = useMemo(() => 10, []);
+
   return (
-    <CountryList limit={10} />
+    <CountryList limit={limit} />
   );
 };
 

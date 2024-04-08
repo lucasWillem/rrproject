@@ -1,5 +1,4 @@
-import { NavLink } from "./types";
-import { Header } from "./Header";
+import Header from "./Header";
+export type { NavLink } from "./types";
 
-export { Header };
-export type { NavLink };
+export default Header;

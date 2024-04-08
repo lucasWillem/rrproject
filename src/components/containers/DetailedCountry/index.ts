@@ -1,1 +1,3 @@
-export { DetailedCountry as default} from "./DetailedCountry";
+import DetailedCountry from "./DetailedCountry";
+
+export default DetailedCountry;

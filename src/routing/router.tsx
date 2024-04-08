@@ -1,9 +1,9 @@
 import React, { FC, ReactNode } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LoginPage } from "../pages/LoginPage";
-import { HomePage } from "../pages/HomePage";
-import { AccountPage } from "../pages/AccountPage";
 import { UnauthorizedPage } from "../pages/UnauthorizedPage";
+import { ListOfCountriesPage } from "../pages/ListOfCountriesPage";
+import { CountryPage } from "../pages/CountryPage";
 import { useCheckIfLoggedIn } from "../hooks/useCheckIfLoggedIn";
 
 import { PrivateRoutes } from "./PrivateRoutes";
@@ -21,8 +21,8 @@ export const Router: FC<RouterProps> = ({ NavBar }) => {
       {NavBar}
       <Routes>
         <Route element={<PrivateRoutes isAuthenticated={isAuthenticated} />}>
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/account" element={<AccountPage />} />
+          <Route path="/countries" element={<ListOfCountriesPage />} />
+          <Route path="/countries/:name" element={<CountryPage/>} />
         </Route>
         <Route element={<PublicRoutes isAuthenticated={isAuthenticated} />}>
           <Route path="/login" element={<LoginPage />} />

@@ -6,7 +6,7 @@ interface PublicRoutesProps {
 }
 
 const PublicRoutes: FC<PublicRoutesProps> = ({ isAuthenticated }) => {
-  return isAuthenticated ? <Navigate to="/home" /> : <Outlet />;
+  return isAuthenticated ? <Navigate to="/countries" /> : <Outlet />;
 };
 
 export { PublicRoutes };

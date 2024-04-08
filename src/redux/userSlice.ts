@@ -3,11 +3,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export interface UserState {
   email: string;
   password: string;
+  jwtToken: string;
 }
 
 const initialUser: UserState = {
   email: "",
   password: "",
+  jwtToken: ""
 };
 
 const userSlice = createSlice({
@@ -15,9 +17,10 @@ const userSlice = createSlice({
   initialState: initialUser,
   reducers: {
     storeUser: (state, action: PayloadAction<UserState>) => {
-      const {email,password} = action.payload;
-      state.email=email;
-      state.password=password;
+      const { email, password, jwtToken } = action.payload;
+      state.email = email;
+      state.password = password;
+      state.jwtToken = jwtToken
     },
     clearUser: () => {
       return initialUser;

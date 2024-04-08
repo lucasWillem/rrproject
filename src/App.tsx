@@ -5,13 +5,12 @@ import { theme } from "./theme/theme";
 import { store, persistor } from "./redux/store";
 import { Provider as ReduxProvider } from "react-redux";
 import { Router } from "./routing/router";
-import { AppContainer } from "./components/layouts/AppContainer";
+import AppLayout from "./components/layouts/AppLayout";
 
 import { NavLink, Header } from "./components/containers/Header";
 
 const NavLinks: NavLink[] = [
-  { label: "Home", path: "/home" },
-  { label: "Account", path: "/account" },
+  { label: "Countries", path: "/countries" },
 ];
 
 function App() {
@@ -20,9 +19,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <ReduxProvider store={store}>
           <PersistGate loading={null} persistor={persistor}>
-            <AppContainer>
+            <AppLayout>
               <Router NavBar={<Header navLinks={NavLinks} />} />
-            </AppContainer>
+            </AppLayout>
           </PersistGate>
         </ReduxProvider>
       </ThemeProvider>

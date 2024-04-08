@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, memo } from "react";
 import {
   AppBar,
   Toolbar,
@@ -23,7 +23,7 @@ interface HeaderProps {
   title?: string;
 }
 
-export const Header: FC<HeaderProps> = ({ navLinks, title = 'Geo App' }) => {
+const Header: FC<HeaderProps> = ({ navLinks, title = 'Geo App' }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const isAuthenticated = useCheckIfLoggedIn();
@@ -81,3 +81,5 @@ export const Header: FC<HeaderProps> = ({ navLinks, title = 'Geo App' }) => {
     </>
   ) : null;
 };
+
+export default memo(Header);

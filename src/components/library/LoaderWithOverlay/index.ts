@@ -1,1 +1,3 @@
-export { LoaderWithOverlay as default } from "./LoaderWithOverlay";
+import  LoaderWithOverlay from "./LoaderWithOverlay";
+
+export default LoaderWithOverlay;

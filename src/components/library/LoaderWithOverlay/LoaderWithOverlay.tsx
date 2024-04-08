@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import { Box } from "@mui/material";
 import Loader from "../Loader";
 import { Variant } from "../../../redux/loaderSlice";
@@ -27,8 +27,4 @@ const LoaderWithOverlay: FC<LoaderWithOverlayProps> = ({ isVisible, variant = 'i
   </Box> : null
 }
 
-
-
-
-
-export { LoaderWithOverlay };
+export default  memo(LoaderWithOverlay);

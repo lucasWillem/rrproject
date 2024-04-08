@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import { StyledSnackBar } from "./styles";
 import { Alert } from "@mui/material";
 import { useDispatch } from "react-redux";
@@ -26,4 +26,4 @@ const SnackBar: FC<SnackBarState> = ({ message, isOpen, severity = AlertSeverity
   </StyledSnackBar>)
 };
 
-export { SnackBar };
+export default memo(SnackBar);

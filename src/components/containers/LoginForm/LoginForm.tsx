@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, memo } from "react";
 import { Controller, useForm } from "react-hook-form";
 
 import { Button, TextField, Typography } from "@mui/material";
@@ -17,7 +17,7 @@ interface LoginFormInputs {
   password: string;
 }
 
-export const LoginForm: FC = () => {
+const LoginForm: FC = () => {
   const {
     control,
     handleSubmit,
@@ -129,3 +129,5 @@ export const LoginForm: FC = () => {
     </StyledLoginForm>
   );
 };
+
+export default memo(LoginForm);

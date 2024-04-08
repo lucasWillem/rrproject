@@ -1,1 +1,3 @@
-export { CountryDatumItem as default } from "./CountryDatumItem";
+import CountryDatumItem from "./CountryDatumItem";
+
+export default CountryDatumItem

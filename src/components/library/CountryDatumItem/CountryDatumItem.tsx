@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode, memo } from "react";
 import { StyledCountryDatumItem } from "./styles";
 import { TypographyVariant } from "@mui/material";
 
@@ -16,6 +16,6 @@ const CountryDatumItem: FC<CountryDatumItemProps> = ({ icon, items, renderItem, 
   </StyledCountryDatumItem>
 };
 
-export { CountryDatumItem };
+export default memo(CountryDatumItem);
 
 

@@ -1,6 +1,6 @@
-# R & R Tech
+# Geo App
 
-Welcome to R & R Tech! This is a brief overview of the technologies and features used in this project.
+Welcome to Geo App! This is a brief overview of the technologies and features used in this project.
 
 ## Technologies Used
 

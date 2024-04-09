@@ -96,3 +96,45 @@ This pattern is useful for creating reusable and customizable components. It all
 The Composition pattern in React involves building complex UIs from smaller, reusable components passed as children or props. This approach enhances code reusability and modularity, facilitating the construction of maintainable and comprehensible UIs.
 
 By adopting these design patterns, Geo App ensures a clean separation of concerns, improves code reusability, and enhances the overall maintainability of the application. These patterns provide a structured approach to building React applications, making it easier for developers to work with the codebase and contribute to the project.
+
+
+## Proposed Optimizations
+
+### Preact Signals for Hooks Replacement
+
+One of the proposed optimizations for the Geo App project is the adoption of Preact Signals to replace traditional React hooks such as `useCallback`, `useEffect`, and others. This change aims to enhance the performance and maintainability of the application by leveraging Preact's efficient state management and side effect handling capabilities.
+
+#### Benefits of Using Preact Signals
+
+- **Performance Improvements:** By replacing React hooks with Preact Signals, the application can benefit from more optimized state updates and side effects, leading to smoother and faster user interactions.
+- **Cleaner Code:** Preact Signals allows for a more declarative approach to state management and side effects, resulting in cleaner and more readable code.
+- **Efficient State Management:** It provides a set of hooks that are optimized for Preact, ensuring efficient state management without the overhead of React's hooks.
+
+### Code Splitting and Lazy Loading
+
+Another proposed optimization for the Geo App project is the implementation of code splitting and lazy-loaded imports for the screens in the router. This strategy aims to reduce the initial bundle size, improve the application's load time, and enhance the user experience by loading only the necessary code for the current view.
+
+#### Benefits of Code Splitting and Lazy Loading?
+
+- **Reduced Initial Load Time:** By splitting the code and loading it lazily, the application's initial load time is significantly reduced. Users can start interacting with the application faster.
+- **Improved Performance:** Lazy loading ensures that users only download the code necessary for the current view, reducing the amount of data that needs to be loaded and parsed.
+
+### Error Boundary Implementation
+
+Implementing an Error Boundary in the Geo App project can significantly enhance the user experience by catching JavaScript or TypeScript errors and providing a graceful fallback UI. This approach ensures that users are not presented with a blank screen or an error message when an unexpected issue occurs, improving the overall stability and reliability of the application.
+
+#### Benefits of an Error Boundary?
+
+- **Improved User Experience:** By catching errors and displaying a fallback UI, users are presented with a more informative and user-friendly message, rather than a blank screen or an error message.
+- **Enhanced Stability:** Error Boundaries prevent the entire application from crashing when an error occurs in a part of the UI. This ensures that the rest of the application remains functional and accessible to users.
+- **Easier Debugging:** Error Boundaries can log errors to an error reporting service, making it easier to identify and fix issues that occur in the application.
+
+### ESLint, Prettier, Lint-Staged and Husky Integration
+
+Integrating ESLint, Prettier, Lint-Staged and Husky into the Geo App project can significantly improve code quality and consistency. This setup ensures that Lint-Staged checks the code for ESLint errors and performs Prettier formatting before it is committed, helping to maintain a high standard of code quality and preventing common issues from being introduced into the codebase.
+
+#### Benefits of ESLint, Prettier, Lint-Staged and Husky Integration
+
+- **Code Quality:** ESLint helps in identifying and reporting on ECMAScript/JavaScript and React errors, with the goal of making code more consistent and avoiding bugs.
+- **Code Formatting:** Prettier enforces a consistent style by parsing your code and re-printing it with its own rules, ensuring that the codebase has a uniform formatting style.
+- **Automated Checks:** Husky and lint-staged automate the process of running linters and formatters on files that are about to be committed, ensuring that only quality code is committed to the repository.

@@ -2,14 +2,6 @@
 
 Welcome to Geo App! This is a brief overview of the technologies and features used in this project.
 
-## Technologies Used
-
-- [Material UI](https://mui.com/): A popular React UI framework that provides pre-built components and styles for designing beautiful user interfaces.
-- [@reduxjs/toolkit](https://redux-toolkit.js.org/): A powerful and opinionated Redux library that simplifies state management by providing a set of utilities and best practices.
-- [React Router](https://reactrouter.com/): A routing library for React that enables declarative routing and navigation in your single-page application.
-- [React Hook Form](https://react-hook-form.com/): A library for efficient form validation and state management using React hooks.
-- [Cypress](https://www.cypress.io/): A powerful tool for testing web applications, supporting component tests, end-to-end tests, and unit tests.
-
 ## Technologies and Packages Used
 
 Geo App leverages a variety of technologies and packages to provide a robust, user-friendly experience. Here's an overview of the key technologies and important packages used in the development of Geo App:

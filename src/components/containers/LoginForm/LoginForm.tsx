@@ -74,6 +74,7 @@ const LoginForm: FC = () => {
           render={({ field }) => (
             <TextField
               {...field}
+              data-testid='email'
               onChange={(e) => {
                 field.onChange(e);
                 handleChange("email");
@@ -97,6 +98,7 @@ const LoginForm: FC = () => {
           render={({ field }) => (
             <TextField
               {...field}
+              data-testid='password'
               onChange={(e) => {
                 field.onChange(e);
                 handleChange("password");
@@ -117,7 +119,7 @@ const LoginForm: FC = () => {
           }}
         />
       </StyledTextContainer>
-      <Button disabled={!isValid} type="submit" variant="outlined">
+      <Button data-testid="submit-login" disabled={!isValid} type="submit" variant="outlined">
         Submit
       </Button>
 

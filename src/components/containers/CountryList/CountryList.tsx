@@ -44,7 +44,7 @@ const CountryList: FC<CountryListProps> = ({ limit }) => {
     navigate(`/countries/:${countryName}`);
   }
 
-  const renderItem = (country: BasicCountry, i: number) => <CountryCard key={i} cardVariant={CardVariant.Basic} raised country={country} onClick={() => handleCountryClick(country.name.common)} />;
+  const renderItem = (country: BasicCountry, i: number) => <CountryCard data-testid="country-item" key={i} cardVariant={CardVariant.Basic} raised country={country} onClick={() => handleCountryClick(country.name.common)} />;
 
   return (
     <Box>

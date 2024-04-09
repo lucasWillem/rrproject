@@ -19,16 +19,19 @@ This combination of technologies and packages ensures that Geo App is built with
 
 To run the app locally, follow these steps:
 
-1. Clone the repository by git clone command.
-2. Install dependencies:
+1. Clone the repository by git clone command
+
+2. Install Node.js version 20.12.0
+
+3. Install dependencies:
 
 bash cd geo-app yarn install
 
-3. Start the development server:
+4. Start the development server:
 
 bash yarn start
 
-Open your browser and navigate to http://localhost:3000 to see the app.
+Open your browser and navigate to http://localhost:3000 to see the app
 
 ## Authentication Simulation
 

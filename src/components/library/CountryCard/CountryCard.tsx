@@ -66,7 +66,7 @@ const CountryCard: FC<CountryCardProps> = (props) => {
   return (
     <StyledCountryCard cardVariant={cardVariant} style={containerStyle} raised {...restProps}>
       <CardContent>
-        <Typography style={{ margin: 5 }} variant="subtitle1">{`${name?.common} (${cca2}):`}</Typography>
+        <Typography data-testid="country-name" style={{ margin: 5 }} variant="subtitle1">{`${name?.common} (${cca2}):`}</Typography>
 
         {
           cardVariant === CardVariant.Detailed &&

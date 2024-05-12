@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import ErrorBoundary from './components/wrappers/ErrorBoundary';
 
 const queryClient = new QueryClient();
 
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <ErrorBoundary>
+         <App />
+      </ErrorBoundary>
     </QueryClientProvider>
   </React.StrictMode>
 );

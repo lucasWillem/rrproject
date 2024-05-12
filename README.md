@@ -110,24 +110,6 @@ One of the proposed optimizations for the Geo App project is the adoption of Pre
 - **Cleaner Code:** Preact Signals allows for a more declarative approach to state management and side effects, resulting in cleaner and more readable code.
 - **Efficient State Management:** It provides a set of hooks that are optimized for Preact, ensuring efficient state management without the overhead of React's hooks.
 
-### Code Splitting and Lazy Loading
-
-Another proposed optimization for the Geo App project is the implementation of code splitting and lazy-loaded imports for the screens in the router. This strategy aims to reduce the initial bundle size, improve the application's load time, and enhance the user experience by loading only the necessary code for the current view.
-
-#### Benefits of Code Splitting and Lazy Loading?
-
-- **Reduced Initial Load Time:** By splitting the code and loading it lazily, the application's initial load time is significantly reduced. Users can start interacting with the application faster.
-- **Improved Performance:** Lazy loading ensures that users only download the code necessary for the current view, reducing the amount of data that needs to be loaded and parsed.
-
-### Error Boundary Implementation
-
-Implementing an Error Boundary in the Geo App project can significantly enhance the user experience by catching JavaScript or TypeScript errors and providing a graceful fallback UI. This approach ensures that users are not presented with a blank screen or an error message when an unexpected issue occurs, improving the overall stability and reliability of the application.
-
-#### Benefits of an Error Boundary?
-
-- **Improved User Experience:** By catching errors and displaying a fallback UI, users are presented with a more informative and user-friendly message, rather than a blank screen or an error message.
-- **Enhanced Stability:** Error Boundaries prevent the entire application from crashing when an error occurs in a part of the UI. This ensures that the rest of the application remains functional and accessible to users.
-- **Easier Debugging:** Error Boundaries can log errors to an error reporting service, making it easier to identify and fix issues that occur in the application.
 
 ### ESLint, Prettier, Lint-Staged and Husky Integration
 

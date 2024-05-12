@@ -5,7 +5,7 @@ import { theme } from "./theme/theme";
 import { store, persistor } from "./redux/store";
 import { Provider as ReduxProvider } from "react-redux";
 import { Router } from "./routing/router";
-import AppLayout from "./components/layouts/AppLayout";
+import AppLayout from "./components/wrappers/AppLayout";
 
 import Header, { NavLink } from "./components/containers/Header";
 

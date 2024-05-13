@@ -1,9 +1,9 @@
-import { Snackbar, styled } from "@mui/material";
+import { Snackbar, styled } from '@mui/material';
 
 const StyledSnackBar = styled(Snackbar)(({ theme }) => ({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 }));
 
 export { StyledSnackBar };

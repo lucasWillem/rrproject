@@ -1,16 +1,16 @@
-import React, { FC, useState, memo } from "react";
-import { Controller, useForm } from "react-hook-form";
+import React, { FC, useState, memo } from 'react';
+import { Controller, useForm } from 'react-hook-form';
 
-import { Button, TextField, Typography } from "@mui/material";
+import { Button, TextField, Typography } from '@mui/material';
 
-import { StyledLoginForm, StyledTextContainer } from "./styles";
-import { emailPattern, passwordPattern } from "../../../constants/regex";
+import { StyledLoginForm, StyledTextContainer } from './styles';
+import { emailPattern, passwordPattern } from '../../../constants/regex';
 
-import { isAuthenticatedUser } from "../../../utils/isAuthenticatedUser";
-import { useDispatch } from "react-redux";
-import { showLoader } from "../../../redux/loaderSlice";
-import { storeUser } from "../../../redux/userSlice";
-import { useNavigate } from "react-router-dom";
+import { isAuthenticatedUser } from '../../../utils/isAuthenticatedUser';
+import { useDispatch } from 'react-redux';
+import { showLoader } from '../../../redux/loaderSlice';
+import { storeUser } from '../../../redux/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 interface LoginFormInputs {
   email: string;
@@ -25,11 +25,11 @@ const LoginForm: FC = () => {
     trigger,
   } = useForm<LoginFormInputs>({
     defaultValues: {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     },
-    mode: "onChange",
-    reValidateMode: "onChange",
+    mode: 'onChange',
+    reValidateMode: 'onChange',
   });
 
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -39,10 +39,11 @@ const LoginForm: FC = () => {
 
   const navigate = useNavigate();
 
-  const jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5";
+  const jwtToken =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5';
 
   const toggleLoader = () => {
-    dispatch(showLoader({ isVisible: true, variant: "success" }));
+    dispatch(showLoader({ isVisible: true, variant: 'success' }));
   };
 
   const onLogin = (data: LoginFormInputs) => {
@@ -57,7 +58,7 @@ const LoginForm: FC = () => {
 
     dispatch(storeUser({ ...data, jwtToken }));
 
-    navigate("/countries");
+    navigate('/countries');
   };
 
   const handleChange = (name: keyof LoginFormInputs) => {
@@ -74,10 +75,10 @@ const LoginForm: FC = () => {
           render={({ field }) => (
             <TextField
               {...field}
-              data-testid='email'
-              onChange={(e) => {
+              data-testid="email"
+              onChange={e => {
                 field.onChange(e);
-                handleChange("email");
+                handleChange('email');
               }}
               label="Email"
               placeholder="Email"
@@ -85,10 +86,10 @@ const LoginForm: FC = () => {
             />
           )}
           rules={{
-            required: "Email is required",
+            required: 'Email is required',
             pattern: {
               value: emailPattern,
-              message: "Please provide a valid email address",
+              message: 'Please provide a valid email address',
             },
           }}
         />
@@ -98,10 +99,10 @@ const LoginForm: FC = () => {
           render={({ field }) => (
             <TextField
               {...field}
-              data-testid='password'
-              onChange={(e) => {
+              data-testid="password"
+              onChange={e => {
                 field.onChange(e);
-                handleChange("password");
+                handleChange('password');
               }}
               label="Password"
               placeholder="Password"
@@ -111,15 +112,20 @@ const LoginForm: FC = () => {
             />
           )}
           rules={{
-            required: "Password is required",
+            required: 'Password is required',
             pattern: {
               value: passwordPattern,
-              message: "8+ chars, 1 uppercase, 1 special char, 1 number",
+              message: '8+ chars, 1 uppercase, 1 special char, 1 number',
             },
           }}
         />
       </StyledTextContainer>
-      <Button data-testid="submit-login" disabled={!isValid} type="submit" variant="outlined">
+      <Button
+        data-testid="submit-login"
+        disabled={!isValid}
+        type="submit"
+        variant="outlined"
+      >
         Submit
       </Button>
 

@@ -1,3 +1,3 @@
-import  LoaderWithOverlay from "./LoaderWithOverlay";
+import LoaderWithOverlay from './LoaderWithOverlay';
 
 export default LoaderWithOverlay;

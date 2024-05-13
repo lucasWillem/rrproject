@@ -1,15 +1,15 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
- 
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 export interface CountryState {
-  countryName?: string
+  countryName?: string;
 }
 
 const initialCountry: CountryState = {
-  countryName: undefined
+  countryName: undefined,
 };
 
 const countrySlice = createSlice({
-  name: "country",
+  name: 'country',
   initialState: initialCountry,
   reducers: {
     storeCountryName: (state, action: PayloadAction<CountryState>) => {

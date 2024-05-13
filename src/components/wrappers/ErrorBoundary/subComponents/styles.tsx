@@ -1,4 +1,4 @@
-import { styled, Box, Button } from "@mui/material";
+import { styled, Box, Button } from '@mui/material';
 
 const StyledFallbackRenderer = styled(Box)(({ theme }) => ({
   height: '100vh',
@@ -10,10 +10,8 @@ const StyledFallbackRenderer = styled(Box)(({ theme }) => ({
   background: theme.palette.background.default,
 }));
 
-
 const StyledButton = styled(Button)(({ theme }) => ({
-  marginTop: theme.spacing(1)
+  marginTop: theme.spacing(1),
 }));
 
 export { StyledFallbackRenderer, StyledButton };
-

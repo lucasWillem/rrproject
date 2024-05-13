@@ -1,4 +1,4 @@
-import React, { FC, useState, memo } from "react";
+import React, { FC, useState, memo } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -7,16 +7,16 @@ import {
   List,
   ListItem,
   ListItemText,
-} from "@mui/material";
-import { Menu as MenuIcon } from "@mui/icons-material";
-import { useDispatch } from "react-redux";
-import { useLocation, useNavigate } from "react-router-dom";
+} from '@mui/material';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import { useDispatch } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-import { clearUser } from "../../../redux/userSlice";
+import { clearUser } from '../../../redux/userSlice';
 
-import { useCheckIfLoggedIn } from "../../../hooks/useCheckIfLoggedIn";
-import { NavLink } from "./types";
-import { StyledTitle } from "./styles";
+import { useCheckIfLoggedIn } from '../../../hooks/useCheckIfLoggedIn';
+import { NavLink } from './types';
+import { StyledTitle } from './styles';
 
 interface HeaderProps {
   navLinks: NavLink[];
@@ -40,10 +40,10 @@ const Header: FC<HeaderProps> = ({ navLinks, title = 'Geo App' }) => {
 
   const handleLogout = () => {
     dispatch(clearUser());
-    navigate("/login");
+    navigate('/login');
   };
 
-  const showHeader = pathname !== "/login" && pathname !== "/unauthorized";
+  const showHeader = pathname !== '/login' && pathname !== '/unauthorized';
 
   return showHeader ? (
     <>

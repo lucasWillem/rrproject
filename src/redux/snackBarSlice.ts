@@ -1,23 +1,21 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AlertColor } from "@mui/material";
-import { AlertSeverity } from "../components/library/SnackBar/SnackBar";
-
-
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { AlertColor } from '@mui/material';
+import { AlertSeverity } from '../components/library/SnackBar/SnackBar';
 
 export interface SnackBarState {
   message: string;
   isOpen: boolean;
-  severity: AlertColor
+  severity: AlertColor;
 }
 
 const initialSnackBar: SnackBarState = {
   message: '',
   isOpen: false,
-  severity: AlertSeverity['Error']
+  severity: AlertSeverity['Error'],
 };
 
 const snackbarSlice = createSlice({
-  name: "snackbar",
+  name: 'snackbar',
   initialState: initialSnackBar,
   reducers: {
     showSnackBar: (state, action: PayloadAction<SnackBarState>) => {

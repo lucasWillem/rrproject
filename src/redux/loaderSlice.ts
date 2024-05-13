@@ -1,25 +1,25 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type Variant = "success" | "secondary" | "inherit";
+export type Variant = 'success' | 'secondary' | 'inherit';
 
 export interface LoaderState {
   isVisible: boolean;
-  variant?: Variant 
+  variant?: Variant;
 }
 
 const initialLoader: LoaderState = {
   isVisible: false,
-  variant: "inherit",
+  variant: 'inherit',
 };
 
 const loaderSlice = createSlice({
-  name: "loader",
+  name: 'loader',
   initialState: initialLoader,
   reducers: {
     showLoader: (state, action: PayloadAction<LoaderState>) => {
-      const {isVisible,variant='inherit'} = action.payload;
+      const { isVisible, variant = 'inherit' } = action.payload;
       state.isVisible = isVisible;
-      state.variant=variant;
+      state.variant = variant;
     },
   },
 });

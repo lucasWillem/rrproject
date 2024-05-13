@@ -1,1 +1,1 @@
-export { isAuthenticatedUser } from "./isAuthenticatedUser";
+export { isAuthenticatedUser } from './isAuthenticatedUser';

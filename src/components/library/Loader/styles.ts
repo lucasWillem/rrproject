@@ -1,4 +1,4 @@
-import { CircularProgress, styled } from "@mui/material";
+import { CircularProgress, styled } from '@mui/material';
 
 const StyledLoader = styled(CircularProgress)(({ theme }) => ({
   display: 'flex',

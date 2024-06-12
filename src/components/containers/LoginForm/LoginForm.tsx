@@ -76,7 +76,7 @@ const LoginForm: FC = () => {
             <TextField
               {...field}
               data-testid="email"
-              onChange={e => {
+              onChange={(e) => {
                 field.onChange(e);
                 handleChange('email');
               }}
@@ -100,7 +100,7 @@ const LoginForm: FC = () => {
             <TextField
               {...field}
               data-testid="password"
-              onChange={e => {
+              onChange={(e) => {
                 field.onChange(e);
                 handleChange('password');
               }}

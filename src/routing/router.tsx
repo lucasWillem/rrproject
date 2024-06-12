@@ -13,23 +13,25 @@ interface RouterProps {
 }
 
 const LoginPage = lazy(() =>
-  import('../pages/LoginPage').then(module => ({ default: module.LoginPage })),
+  import('../pages/LoginPage').then((module) => ({
+    default: module.LoginPage,
+  })),
 );
 
 const UnauthorizedPage = lazy(() =>
-  import('../pages/UnauthorizedPage').then(module => ({
+  import('../pages/UnauthorizedPage').then((module) => ({
     default: module.UnauthorizedPage,
   })),
 );
 
 const ListOfCountriesPage = lazy(() =>
-  import('../pages/ListOfCountriesPage').then(module => ({
+  import('../pages/ListOfCountriesPage').then((module) => ({
     default: module.ListOfCountriesPage,
   })),
 );
 
 const CountryPage = lazy(() =>
-  import('../pages/CountryPage').then(module => ({
+  import('../pages/CountryPage').then((module) => ({
     default: module.CountryPage,
   })),
 );

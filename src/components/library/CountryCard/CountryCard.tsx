@@ -45,7 +45,7 @@ enum TypographyVariants {
   inherit = 'inherit',
 }
 
-const CountryCard: FC<CountryCardProps> = props => {
+const CountryCard: FC<CountryCardProps> = (props) => {
   const { country, containerStyle, cardVariant, ...restProps } = props;
   const { name, cca2 } = country;
   // memoized icons - prevent unnecessary re-renders

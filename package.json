@@ -38,7 +38,7 @@
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\""
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +60,6 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.195",
-    "prettier": "^3.2.5"
+    "prettier": "3.3.2"
   }
 }
